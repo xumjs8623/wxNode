@@ -5,4 +5,9 @@ router.get('/',(ctx,next)=>{
     msg:'这是api接口'
   }
 });
+router.post('/',(ctx,next)=>{
+  ctx.body = {
+    msg:'这是api post接口'
+  }
+});
 module.exports = router;

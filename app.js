@@ -34,8 +34,9 @@ app.use(async (ctx, next) => {
 });
 
 // routes
-app.use(index.routes(), index.allowedMethods());
 app.use(api.routes(), api.allowedMethods());
+app.use(index.routes(), index.allowedMethods());
+
 app.use(wechat(config).middleware(async (message) => {
   return(wechatControl(message))
 }));
