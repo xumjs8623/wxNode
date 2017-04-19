@@ -5,6 +5,7 @@
   // Content: 'h',
   // MsgId: '6410602215862896609' }  
 module.exports = (message)=>{
+  console.log(message);
   if(message.Content == 'h'){
     return 'hhh';
   }
