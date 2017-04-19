@@ -38,6 +38,7 @@ var config = {
 };
 app.use(wechat(config).middleware(async (message) => {
   // 微信输入信息就是这个 message
+  console.log(message);
   if (message.FromUserName === 'h') {
     // 回复屌丝(普通回复)
     return 'hehe';
