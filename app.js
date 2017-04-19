@@ -35,7 +35,7 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods());
 
 app.use(wechat(config).middleware(async (message) => {
-  wechatControl(message);
+  return(wechatControl(message))
 }));
 
 
