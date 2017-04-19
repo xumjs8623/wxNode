@@ -7,9 +7,11 @@ const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 
 const index = require('./routes/index');
+const api = require('./routes/api');
 const wechat = require('co-wechat');
 const config = require('./wechatConfig');
 var wechatControl = require('./controllers/wechatController');
+
 // error handler
 onerror(app);
 
@@ -33,6 +35,7 @@ app.use(async (ctx, next) => {
 
 // routes
 app.use(index.routes(), index.allowedMethods());
+app.use(api.routes(), api.allowedMethods());
 app.use(wechat(config).middleware(async (message) => {
   return(wechatControl(message))
 }));
