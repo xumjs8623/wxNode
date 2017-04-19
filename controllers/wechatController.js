@@ -7,6 +7,10 @@
 module.exports = (message)=>{
   if(message.Content == 'h'){
   console.log(message);
-    return 'hhh';
+   return [{
+      title: '测试',
+      description: '测试',
+      url: 'https://wx.xuminjun.com/openId='+message.FromUserName
+    }];
   }
 }
