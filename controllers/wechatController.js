@@ -10,7 +10,7 @@ module.exports = (message)=>{
    return [{
       title: '测试',
       description: '测试',
-      url: 'https://wx.xuminjun.com/openId='+message.FromUserName
+      url: 'https://wx.xuminjun.com?openId='+message.FromUserName
     }];
   }
 }
